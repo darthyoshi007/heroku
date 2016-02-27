@@ -24,7 +24,7 @@ window.createUser = function(){
       console.log("Successfully created user account with uid:", userData.uid);
     }
   });
-}
+};
 
 window.authUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
@@ -39,8 +39,25 @@ window.authUser = function(){
       console.log("Authenticated successfully with payload:", authData);
     }
   });
-}
+};
 
+window.teacherOnLoad = function(){
+  var courses = ["Math","English","Science"];
+  // Get data from Firebase and put into courses array
+  var array = ["one", "two", "three"];
+  var courseHTML = [];
+  for(var i = 0; i < courses.length; i++){
+    courseHTML[i] = "<li><a href='" + courses[i] + "" + i +"'>" + courses[i] + "</a></li>";
+
+  }
+  // var courseHTML = $.map(courses, function(course, i) {
+  //   return "<li><a href='" + course + "" + i +"'>" + course + "</a></li>";
+  // });
+console.log(courseHTML);
+  var data = courseHTML.join("");
+  console.log(data);
+  document.getElementById("teacherCoursesList").innerHTML = data;
+};
 },{"firebase":2}],2:[function(require,module,exports){
 /*! @license Firebase v2.4.1
     License: https://www.firebase.com/terms/terms-of-service.html */
