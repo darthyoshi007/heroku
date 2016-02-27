@@ -1,7 +1,16 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
+if (localStorage.getItem("uid") != null){
+  window.location.assign("./student-projects.html");
+}
+
 var Firebase = require("firebase");
 var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to firebase server
+
+// localStorage.setItem("uid", "true"); LOCALSTORAGE EXAMPLE
+// console.log(localStorage.uid);
+// localStorage.removeItem("uid");
+
 // var app = angular.module("herokuhackathon", ["firebase"]);
 // app.controller("somethingggggggggggggg", function($scope, $firebaseObject) {
 //   // download the data into a local object
@@ -29,6 +38,7 @@ window.createUser = function(){
 window.authUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
   var passwordHTML = document.getElementById("password-input").value; //string
+  localStorage.setItem("uid", document.getElementById("email-input").value);
   ref.authWithPassword({
     email    : emailHTML,
     password : passwordHTML
@@ -36,6 +46,7 @@ window.authUser = function(){
     if (error) {
       console.log("Login Failed!", error);
     } else {
+      localStorage.set("uid", authData.uid);
       console.log("Authenticated successfully with payload:", authData);
     }
   });
