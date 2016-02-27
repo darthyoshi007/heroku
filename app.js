@@ -5,6 +5,7 @@ if (localStorage.getItem("uid") != null){
 
 var Firebase = require("firebase");
 var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to firebase server
+var usersRef = ref.child("users");
 
 // localStorage.setItem("uid", "true"); LOCALSTORAGE EXAMPLE
 // console.log(localStorage.uid);
@@ -18,9 +19,20 @@ var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to fir
 //   syncObject.$bindTo($scope, "data");
 // });
 
+window.addProject = function(){
+  var projectName = document.getElementById("").value;
+  var projectDescription = document.getElementById("").value;
+  var projectClass = document.getElementById("").value;
+}
+
 window.createUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
   var passwordHTML = document.getElementById("password-input").value; //string
+  usersRef.push({
+    emailHTML: {
+
+    }
+  });
   console.log(document.getElementById("email-input").value);
   ref.createUser({
     email    : emailHTML,
