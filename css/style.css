@@ -109,7 +109,7 @@ input,
 	box-shadow: 0 5px 10px #737373;
 	position: absolute;
 	right:50px;
-	bottom: -50px;
+	bottom: 10px;
 	  }
 	.btn-add:hover{
 	background-color: #00bbff;
