@@ -146,8 +146,12 @@ input,
 
 a{
 	color: inherit;
+	
 }
-
+a:hover{
+	text-decoration: none;
+	color: #ff9100;
+	}
 
 
 .hvr-underline-centerD {
