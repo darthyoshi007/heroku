@@ -6,6 +6,7 @@ if (localStorage.getItem("uid") != null){
 
 var Firebase = require("firebase");
 var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to firebase server
+var usersRef = ref.child("users");
 
 // localStorage.setItem("uid", "true"); LOCALSTORAGE EXAMPLE
 // console.log(localStorage.uid);
@@ -19,9 +20,20 @@ var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to fir
 //   syncObject.$bindTo($scope, "data");
 // });
 
+window.addProject = function(){
+  var projectName = document.getElementById("").value;
+  var projectDescription = document.getElementById("").value;
+  var projectClass = document.getElementById("").value;
+}
+
 window.createUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
   var passwordHTML = document.getElementById("password-input").value; //string
+  usersRef.push({
+    emailHTML: {
+
+    }
+  });
   console.log(document.getElementById("email-input").value);
   ref.createUser({
     email    : emailHTML,
@@ -65,6 +77,21 @@ window.teacherOnLoad = function(){
   // });
   document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
 };
+
+window.teacherOnLoad = function(){
+  var courses = ["Math","English","Science"];
+  // Get data from Firebase and put into courses array
+  var array = ["one", "two", "three"];
+  var courseHTML = [];
+  for(var i = 0; i < courses.length; i++){
+    courseHTML[i] = "<li><span class='menu-item hvr-underline-centerD' onclick='courseTabChange(" + courses[i] + "" + i +")'>" + courses[i] + "</span></li>";
+  }
+  // var courseHTML = $.map(courses, function(course, i) {
+  //   return "<li><a href='" + course + "" + i +"'>" + course + "</a></li>";
+  // });
+  document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
+};
+
 },{"firebase":2}],2:[function(require,module,exports){
 /*! @license Firebase v2.4.1
     License: https://www.firebase.com/terms/terms-of-service.html */
