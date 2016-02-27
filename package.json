@@ -1,0 +1,22 @@
+{
+  "name": "heroku",
+  "version": "1.0.0",
+  "description": "made for heroku hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darthyoshi007/heroku.git"
+  },
+  "keywords": [
+    "education"
+  ],
+  "author": "Parth, Brian, Diana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darthyoshi007/heroku/issues"
+  },
+  "homepage": "https://github.com/darthyoshi007/heroku#readme"
+}
