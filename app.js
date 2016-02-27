@@ -76,3 +76,17 @@ window.teacherOnLoad = function(){
   // });
   document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
 };
+
+window.teacherOnLoad = function(){
+  var courses = ["Math","English","Science"];
+  // Get data from Firebase and put into courses array
+  var array = ["one", "two", "three"];
+  var courseHTML = [];
+  for(var i = 0; i < courses.length; i++){
+    courseHTML[i] = "<li><span class='menu-item hvr-underline-centerD' onclick='courseTabChange(" + courses[i] + "" + i +")'>" + courses[i] + "</span></li>";
+  }
+  // var courseHTML = $.map(courses, function(course, i) {
+  //   return "<li><a href='" + course + "" + i +"'>" + course + "</a></li>";
+  // });
+  document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
+};
