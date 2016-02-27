@@ -69,7 +69,7 @@ window.teacherOnLoad = function(){
 
   var courseHTML = [];
   for(var i = 0; i < courses.length; i++){
-    courseHTML[i] = "<li><span class='menu-item hvr-underline-centerD' onclick='courseTabChange(" + courses[i] + "" + i +")'>" + courses[i] + "</span></li>";
+    courseHTML[i] = "<li><span class='menu-item hvr-underline-centerD' onclick='courseTabChange(\"" + courses[i] + "" + i +"\")'>" + courses[i] + "</span></li>";
   }
 
   document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
@@ -77,8 +77,8 @@ window.teacherOnLoad = function(){
 
 window.courseTabChange = function(courseID){
   // Get data from database 
-  var formattedData = "";
+  var formattedData = "<span>" + courseID + "</span>";
 
-  document.getElementById("projectsForCourse").innerHTML = formatedData;
+  document.getElementById("projectsForCourse").innerHTML = formattedData;
 
 };
