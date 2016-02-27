@@ -20,6 +20,51 @@ width: 100%;
 	margin: auto;
 }
 
+/*  Header and Titles*/ 
+.header{
+  background-color: #00bbff;
+  opacity: 0.95;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-bottom-style: none;
+  box-shadow: 0px 2px 7px rgba(202, 202, 202, 0.41);
+  width: 100%;
+}
+
+.logo{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #00bbff;
+    font-size:75px;
+}
+.main-title{
+    font-family: 'Montserrat', sans-serif;
+    color: #00bbff;
+    font-size:75px;
+}
+
+.logomini{
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15%;
+}
+.btn-logout{
+	width: 100px;
+	position: absolute;
+	right: 25px;
+	top: 5px;
+	color: white;
+	font-weight: 700;
+	background-color: #00bbff;
+	border-color: #fff;
+	}
+.btn-logout:hover{
+	background-color: #a2e6ff;
+	  } 
+	
+
+
 /* Form and form buttons*/
 .form-section {
     margin: 2em auto;
@@ -64,6 +109,7 @@ input,
 	box-shadow: 0 5px 10px #737373;
 	position: absolute;
 	right:50px;
+	bottom: -50px;
 	  }
 	.btn-add:hover{
 	background-color: #00bbff;
@@ -151,35 +197,7 @@ a{
 	}
 
 
-/*  Header and Titles*/ 
-.header{
-  background-color: #00bbff;
-  opacity: 0.95;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  border-bottom-style: none;
-  box-shadow: 0px 2px 7px rgba(202, 202, 202, 0.41);
-  width: 100%;
-}
 
-.logo{
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #00bbff;
-    font-size:75px;
-}
-.main-title{
-    font-family: 'Montserrat', sans-serif;
-    color: #00bbff;
-    font-size:75px;
-}
-
-.logomini{
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 15%;
-}
 
 
 /* Text variations*/
