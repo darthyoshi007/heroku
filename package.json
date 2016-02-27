@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/darthyoshi007/heroku/issues"
   },
-  "homepage": "https://github.com/darthyoshi007/heroku#readme"
+  "homepage": "https://github.com/darthyoshi007/heroku#readme",
+  "dependencies": {
+    "angularfire": "^1.1.4"
+  }
 }
