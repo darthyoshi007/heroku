@@ -53,14 +53,20 @@ window.authUser = function(){
 
 window.teacherOnLoad = function(){
   var courses = ["Math","English","Science"];
-  // Get data from Firebase and put into courses array
-  var array = ["one", "two", "three"];
+  // Get data from database and put into courses array
+
   var courseHTML = [];
   for(var i = 0; i < courses.length; i++){
     courseHTML[i] = "<li><span class='menu-item hvr-underline-centerD' onclick='courseTabChange(" + courses[i] + "" + i +")'>" + courses[i] + "</span></li>";
   }
-  // var courseHTML = $.map(courses, function(course, i) {
-  //   return "<li><a href='" + course + "" + i +"'>" + course + "</a></li>";
-  // });
+
   document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
+};
+
+window.courseTabChange = function(courseID){
+  // Get data from database 
+  var formattedData = "";
+
+  document.getElementById("projectsForCourse").innerHTML = formatedData;
+
 };
