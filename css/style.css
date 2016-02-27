@@ -42,9 +42,17 @@ input,
   }
   button {
     color: white;
-    width: 80%;
-    background-color: #00bbff;
+    width: 30%;
   }
+  .btn-login{
+	background-color: #00bbff;
+	  }
+  .btn-teacherlogin{
+	background-color: #ff8100;
+	  }
+  .btn-create{
+	background-color: #00bbff;
+	  }	  
   form,
   ul {
     margin-bottom: 0;
@@ -191,6 +199,7 @@ li a:hover{
 .clear-txt{
 	color: white;
 	}
+	
 .main-title{
     font-family: 'Montserrat Alternates', sans-serif;
     color: #00bbff;
@@ -201,6 +210,12 @@ li a:hover{
     color: #00bbff;
     font-size:1em;
 	}
+h2{
+	font-family: 'Montserrat', sans-serif;
+    color: #00bbff;
+    font-size:1.5em;
+    }
+	
 .menu-drop{
 	font-family: 'Montserrat', sans-serif;
     color: #00bbff;
