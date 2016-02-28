@@ -30,8 +30,8 @@
         <![endif]-->
 
         <!--    JQUERY        =============================================== -->
-        <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     </head>
     <body>
@@ -90,7 +90,7 @@
         <section class="col-sm-offset-3 col-sm-9 in-body" id="form-section">
 
 	        <form id="new-project-item-form" class="text-center">
-				<button onclick="" class="btn-add" type="submit">+</button>
+				<button onclick="" class="btn-add" type="submit" data-toggle="modal" data-target="#addFoodModal" id="addAdish">+</button>
 			</form>
 
 
@@ -120,10 +120,46 @@
 
 		</section>
     <!--/.row-->
-    <!-- Projects Section -->
+    <!--Modal-->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="addFoodModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="card-block">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<form id="add-new-project-form">
+									<h1 class="titles text-center">New Project Info</h1>
+									<label class="form-txt-labels">Project title</label>
+									<input class="form-txt-inputs" type="text" id="project-name-input" placeholder="ex: Coder Con" contenteditable=""><br><br>
+									<label class="form-txt-labels">Description</label>
+									<input class="form-txt-inputs txt-area" type="textarea" id="project-description-input" placeholder="Tell us what you did" contenteditable=""><br><br><br>
+									<h2>Skills used</h2>
+									<label><input type="checkbox" id="skill-checkbox"><span class="form-check-labels">Programming Languages</span></label>
+									<label><input class="form-check-inputs" type="checkbox" id="skill-checkbox"><span class="form-check-labels">Visual Design</span></label> 
+									<label><input class="form-check-inputs" type="checkbox" id="skill-checkbox"><span class="form-check-labels">Web Design</span></label>
+									<p>Optional: add a class if you want extra credit for this</p>
+									<select id="soflow">
+										<option value="class1">Class 1</option>
+										<option value="class2">Class 2</option>
+										<option value="class3">Class 3</option>
+										<option value="class4">Class 4</option>
+									</select>
+									<button class="btn-login">Add Project</button>
+								</form>
+							</div>
+						</div>
 
-        <!-- /.row 2-->
+						
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
   </div><!--/.container-->
+  
+  
+  
 </body>
 </html>
