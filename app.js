@@ -84,7 +84,7 @@ window.teacherOnLoad = function(){
 window.courseTabChange = function(courseID){
   // Get data from database 
   var formattedData = "<span>" + courseID + "</span>";
-
-  document.getElementById("projectsForCourse").innerHTML = formattedData;
+  window.location = "teacher2.html";
+  //document.getElementById("projectsForCourse").innerHTML = formattedData;
 
 };
