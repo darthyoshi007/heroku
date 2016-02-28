@@ -1,5 +1,5 @@
 
-
+var cool = require('cool-ascii-faces');
 var Firebase = require("firebase");
 var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to firebase server
 var usersRef = ref.child("users");
@@ -98,7 +98,7 @@ window.approved = function(){
 }
 
 window.courseTabChange = function(courseID){
-  // Get data from database 
+  // Get data from database
   var formattedData = "<span>" + courseID + "</span>";
   window.location = "teacher2.html";
   //document.getElementById("projectsForCourse").innerHTML = formattedData;

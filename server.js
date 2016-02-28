@@ -8,5 +8,5 @@ server.listen(8080, function() {
 });
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname + '/app.js'));
+  res.sendFile(path.join(__dirname + '/bundle.js'));
 });

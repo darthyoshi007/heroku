@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/darthyoshi007/heroku#readme",
   "dependencies": {
-    "angularfire": "^1.1.4"
+    "angularfire": "^1.1.4",
+    "cool-ascii-faces": "1.3.3",
+    "express": "^4.13.4",
+    "firebase": "^2.4.1",
+    "firebase-tools": "^2.2.1"
   }
 }
