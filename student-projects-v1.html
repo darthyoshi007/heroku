@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Heroku's Coder Con Education Website and Web App">
+    <meta name="keywords" content="Education, Technology, Heroku, Coder Con, ">
+    <meta name="author" content="Diana Galvis, Parth and Bryan">
+
+    <title>Student - Projects</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- My CSS + animate -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="./bundle.js"></script>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--    JQUERY        =============================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <wrapper>
+            <!-- Header -->
+            <header>
+                <!-- Navigation -->
+                <nav class="navbar navbar-inverse navbar-fixed-top header in-body" role="navigation">
+                    <div class="header">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header fadeInDown">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.html" class="clear-txt logomini hvr-underline-centerD">LifeSkills</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav pull-right">
+								<li><button onclick="deAuth()" class="btn-logout">Log out</button></li>
+            				</ul>
+        				</div>
+
+        </div>
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- /.header -->
+</header>
+
+
+
+
+
+<!-- Page Content -->
+<main>
+ <!-- Top Section -->
+ <section class="container topsection">
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="#" class="menu-item hvr-underline-centerD">Profile</a></li>
+              <li><a href="#" class="menu-item hvr-underline-centerD">Projects</a></li>
+              <li><a href="#" class="menu-item hvr-underline-centerD">Process</a></li>
+            </ul>
+        </div>
+
+        <!-- main area -->
+        <section class="col-sm-offset-3 col-sm-9 in-body" id="form-section">
+
+	        <form id="new-project-item-form" class="text-center">
+				<button onclick="" class="btn-add" type="submit" data-toggle="modal" data-target="#addFoodModal" id="addAdish">+</button>
+			</form>
+
+
+
+	        <div class="col-sm-offset-0 col-sm-12">
+		            <h1 class="titles text-center padtop padbottom">MY PROJECTS</h1>
+		    </div>
+            <div class="col-offset2">
+				<div class="project-item2">
+		            <a href="#">
+			        <div class="thumb-img"><img src="https://sumo.stanford.edu/images/smtbanner.png" class="img-responsive center-block" alt="Image of volunteer"></div>
+	                <div class="project-preview">
+		                <h3 class="padtxt projecttitle">Math Olympiad<span class="extrasmalltext green-txt">Pending</span></h3>
+						<div><p class="lead longtext text-left padtxt">Math competition at Stanford</p></div>
+	                </div></a>
+				</div>
+	            <div class="project-item2">
+		            <a href="#">
+			        <div class="thumb-img"><img src="https://codercentral.org/images/ccfullpaint.jpg" class="img-responsive center-block" alt="Image of cc logo"></div>
+	                <div class="project-preview">
+		                <h3 class="padtxt projecttitle">Coder Con <span class="extrasmalltext orange-txt">Pending</span></h3>
+						<div><p class="lead longtext text-left padtxt">Coding the css of the website</p></div>
+	                </div></a>
+	            </div>
+	            <div class="project-item2">
+		            <a href="#">
+			        <div class="thumb-img"><img src="http://brightertomorrowsinc.org/wp-content/uploads/2014/08/photodune-3073633-volunteer-group-with-food-donation-m.jpg" class="img-responsive center-block" alt="Image of volunteer"></div>
+	                <div class="project-preview">
+		                <h3 class="padtxt projecttitle">Non-profit <span class="extrasmalltext green-txt">Approved</span></h3>
+						<div><p class="lead longtext text-left padtxt">Volunteer experience</p></div>
+	                </div></a>
+				</div>
+			</div>
+
+		</section>
+    <!--/.row-->
+    <!--Modal-->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="addFoodModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="card-block">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<form id="add-new-project-form">
+									<h1 class="titles text-center">New Project Info</h1>
+									<label class="form-txt-labels">Project title</label>
+									<input class="form-txt-inputs" type="text" id="project-name-input" placeholder="ex: Coder Con" contenteditable=""><br><br>
+									<label class="form-txt-labels">Description</label>
+									<input class="form-txt-inputs txt-area" type="textarea" id="project-description-input" placeholder="Tell us what you did" contenteditable=""><br><br>
+									<label class="form-txt-labels">Image link</label>
+									<input class="form-txt-inputs" type="text" id="project-name-input" placeholder="link of image" contenteditable=""><br>
+<!-- 									<button class="btn-">Add Image</button> -->
+									<h2>Skills used</h2>
+									<label><input type="checkbox" id="skill-checkbox"><span class="form-check-labels">Programming Languages</span></label>
+									<label><input class="form-check-inputs" type="checkbox" id="skill-checkbox"><span class="form-check-labels">Visual Design</span></label> 
+									<label><input class="form-check-inputs" type="checkbox" id="skill-checkbox"><span class="form-check-labels">Web Design</span></label>
+									<p>Optional: add a class if you want extra credit for this</p>
+									<select id="soflow">
+										<option value="class1">Class 1</option>
+										<option value="class2">Class 2</option>
+										<option value="class3">Class 3</option>
+										<option value="class4">Class 4</option>
+									</select>
+									<a href=""><button class="btn-login">Add Project</button></a>
+								</form>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+  </div><!--/.container-->
+  
+  
+  
+</body>
+</html>
