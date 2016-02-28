@@ -10,7 +10,7 @@
     <meta name="keywords" content="Education, Technology, Heroku, Coder Con, ">
     <meta name="author" content="Diana Galvis, Parth and Bryan">
 
-    <title>Student - Projects</title>
+    <title>Student - Profile</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -54,11 +54,13 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav pull-right">
+
 								<li><button onclick="deAuth()" class="btn-logout">Log out</button></li>
             				</ul>
         				</div>
 
         </div>
+
 
         <!-- /.navbar-collapse -->
     </div>
@@ -77,6 +79,7 @@
  <section class="container topsection">
       <div class="row row-offcanvas row-offcanvas-left">
 
+
         <!-- sidebar -->
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <ul class="nav">
@@ -89,40 +92,20 @@
         <!-- main area -->
         <section class="col-sm-offset-3 col-sm-9 in-body" id="form-section">
 
-	        <form id="new-project-item-form" class="text-center">
-				<button onclick="" class="btn-add" type="submit" data-toggle="modal" data-target="#addFoodModal" id="addAdish">+</button>
-			</form>
+	        
 
 
 
 	        <div class="col-sm-offset-0 col-sm-12">
-		            <h1 class="titles text-center padtop padbottom">MY PROJECTS</h1>
+		            <h1 class="titles text-center padtop padbottom">PROFILE</h1>
 		    </div>
             <div class="col-offset2">
-				<div class="project-item2">
-		            <a href="#">
-			        <div class="thumb-img"><img src="http://science.psu.edu/news-and-events/featured-news/penn-state-science-students-cover-the-globe-1/image" class="img-responsive center-block" alt="Image of volunteer"></div>
-	                <div class="project-preview">
-		                <h3 class="padtxt projecttitle">Science Globe <span class="extrasmalltext orange-txt">Pending</span></h3>
-						<div><p class="lead longtext text-left padtxt">Attended the science globe</p></div>
-	                </div></a>
-				</div>
-	            <div class="project-item2">
-		            <a href="#">
-			        <div class="thumb-img"><img src="http://codercon.org/images/coderconlogo.png" class="img-responsive center-block" alt="Image of cc logo"></div>
-	                <div class="project-preview">
-		                <h3 class="padtxt projecttitle">Coder Con <span class="extrasmalltext orange-txt">Pending</span></h3>
-						<div><p class="lead longtext text-left padtxt">Coding the css of the website</p></div>
-	                </div></a>
-	            </div>
-	            <div class="project-item2">
-		            <a href="#">
-			        <div class="thumb-img"><img src="http://brightertomorrowsinc.org/wp-content/uploads/2014/08/photodune-3073633-volunteer-group-with-food-donation-m.jpg" class="img-responsive center-block" alt="Image of volunteer"></div>
-	                <div class="project-preview">
-		                <h3 class="padtxt projecttitle">Non-profit <span class="extrasmalltext green-txt">Approved</span></h3>
-						<div><p class="lead longtext text-left padtxt">Volunteer experience</p></div>
-	                </div></a>
-				</div>
+				<div class="thumb-img"><img src="http://www.thebusinessjournal-la.com/wp-content/uploads/2014/06/zachary.jpg" class="img-responsive center-block" alt="Image of cc logo"></div><div class="project-preview">
+		                <h3 class="padtxt projecttitle">Zach Martin <span class="extrasmalltext orange-txt">2 Projects Pending</span></h3>
+						<div><p class="lead longtext text-left padtxt">Loves: computer science, technology and science fiction </p></div>
+	                </div>
+				<div class="col-xs-11"><img src="img/paths.png" class="img-responsive center-block padtop" alt="Image of cc logo"></div></div>
+	            
 			</div>
 
 		</section>
@@ -140,10 +123,7 @@
 									<label class="form-txt-labels">Project title</label>
 									<input class="form-txt-inputs" type="text" id="project-name-input" placeholder="ex: Coder Con" contenteditable=""><br><br>
 									<label class="form-txt-labels">Description</label>
-									<input class="form-txt-inputs txt-area" type="textarea" id="project-description-input" placeholder="Tell us what you did" contenteditable=""><br><br>
-									<label class="form-txt-labels">Image link</label>
-									<input class="form-txt-inputs" type="text" id="project-name-input" placeholder="link of image" contenteditable=""><br>
-<!-- 									<button class="btn-">Add Image</button> -->
+									<input class="form-txt-inputs txt-area" type="textarea" id="project-description-input" placeholder="Tell us what you did" contenteditable=""><br><br><br>
 									<h2>Skills used</h2>
 									<label><input type="checkbox" id="skill-checkbox"><span class="form-check-labels">Programming Languages</span></label>
 									<label><input class="form-check-inputs" type="checkbox" id="skill-checkbox"><span class="form-check-labels">Visual Design</span></label> 
@@ -155,7 +135,7 @@
 										<option value="class3">Class 3</option>
 										<option value="class4">Class 4</option>
 									</select>
-									<a href=""><button class="btn-login">Add Project</button></a>
+									<a href="student-projects-v1.html"><button class="btn-login">Add Project</button></a>
 								</form>
 							</div>
 						</div>
@@ -173,3 +153,4 @@
   
 </body>
 </html>
+
