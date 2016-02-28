@@ -71,7 +71,7 @@ window.deAuth = function(){
 }
 
 window.teacherOnLoad = function(){
-  var courses = ["Math","English","Science"];
+  var courses = ["CS 101","CS 102","CS 104"];
   // Get data from database and put into courses array
 
   var courseHTML = [];
@@ -81,6 +81,22 @@ window.teacherOnLoad = function(){
 
   document.getElementById("teacherCoursesList").innerHTML = courseHTML.join("");
 };
+
+window.cs101 = function(){
+  window.location = "teacher.html";
+}
+
+window.cs102 = function(){
+  window.location = "teacher2.html";
+}
+
+window.cs104 = function(){
+  window.location = "teacher3.html";
+}
+
+window.approved = function(){
+  window.location = "teacher4.html";
+}
 
 window.courseTabChange = function(courseID){
   // Get data from database 
