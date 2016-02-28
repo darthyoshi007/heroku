@@ -1,12 +1,12 @@
 
-if (localStorage.getItem("uid") != null){
-  window.location.assign("./student-projects.html");
-}
 
 var Firebase = require("firebase");
 var ref = new Firebase("https://herokuhackathon.firebaseio.com"); //links to firebase server
 var usersRef = ref.child("users");
 
+if (localStorage.getItem("uid") != null && window.location.pathname == "./index.html"){
+  window.location.assign("./student-projects.html");
+}
 // localStorage.setItem("uid", "true"); LOCALSTORAGE EXAMPLE
 // console.log(localStorage.uid);
 // localStorage.removeItem("uid");
@@ -28,12 +28,7 @@ window.addProject = function(){
 window.createUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
   var passwordHTML = document.getElementById("password-input").value; //string
-  usersRef.push({
-    emailHTML: {
-
-    }
-  });
-  console.log(document.getElementById("email-input").value);
+  window[emailHTML] = "";
   ref.createUser({
     email    : emailHTML,
     password : passwordHTML
@@ -41,7 +36,11 @@ window.createUser = function(){
     if (error) {
       console.log("Error creating user:", error);
     } else {
-      console.log("Successfully created user account with uid:", userData.uid);
+      var userid = "" + userData.uid;
+      var obj = {};
+      obj[emailHTML] = userid;
+      console.log(userid);
+      ref.push(obj);
     }
   });
 };
@@ -49,7 +48,6 @@ window.createUser = function(){
 window.authUser = function(){
   var emailHTML = document.getElementById("email-input").value; //string
   var passwordHTML = document.getElementById("password-input").value; //string
-  localStorage.setItem("uid", document.getElementById("email-input").value);
   ref.authWithPassword({
     email    : emailHTML,
     password : passwordHTML
@@ -57,11 +55,19 @@ window.authUser = function(){
     if (error) {
       console.log("Login Failed!", error);
     } else {
-      localStorage.set("uid", authData.uid);
       console.log("Authenticated successfully with payload:", authData);
+      localStorage.setItem("uid", authData.uid);
+      if (localStorage.getItem("uid") != null){
+        window.location.assign("./student-projects.html");
+      }
     }
   });
 };
+
+window.deAuth = function(){
+  localStorage.removeItem("uid");
+  window.location.assign("./index.html");
+}
 
 window.teacherOnLoad = function(){
   var courses = ["Math","English","Science"];
