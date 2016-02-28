@@ -105,6 +105,10 @@ window.courseTabChange = function(courseID){
   //document.getElementById("projectsForCourse").innerHTML = formattedData;
 
 };
+
+window.teacher = function(){
+  window.location = "teacher.html";
+}
 },{"firebase":2}],2:[function(require,module,exports){
 /*! @license Firebase v2.4.1
     License: https://www.firebase.com/terms/terms-of-service.html */

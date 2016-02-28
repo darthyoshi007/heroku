@@ -104,3 +104,7 @@ window.courseTabChange = function(courseID){
   //document.getElementById("projectsForCourse").innerHTML = formattedData;
 
 };
+
+window.teacher = function(){
+  window.location = "teacher.html";
+}
